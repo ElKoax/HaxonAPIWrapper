@@ -14,7 +14,7 @@ local mt = getrawmetatable(game)
 local index = mt.__index
 local namecall = mt.__namecall
 
-mt.__namecall = newcclosure(function(self, ...)
+mt.__namecall = function(self, ...)
 	local args = { ... }
 	local method = tbl_remove(args)
 	if checkcaller() then				
@@ -29,7 +29,7 @@ mt.__namecall = newcclosure(function(self, ...)
 	return namecall(self, ...)
 end)
 
-mt.__index = newcclosure(function(self, k)
+mt.__index = function(self, k)
 	if checkcaller() then
 		if type(k) == "string" then
 			if k == "HttpGet" then
