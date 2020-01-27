@@ -43,5 +43,7 @@ mt.__namecall = function(self, ...)
 	return namecall(self, ...)
 end
 
+getfenv().script=Instance.new"LocalScript"
+
 print("die xd jk loaded wetard")
 error("no u")
