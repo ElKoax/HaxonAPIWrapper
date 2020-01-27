@@ -1,4 +1,3 @@
-
 local tbl_remove = table.remove
 local GetService = game.GetService
 local httpget = httpget
@@ -32,7 +31,7 @@ end
 mt.__namecall = function(self, ...)
 	local args = { ... }
 	local method = tbl_remove(args)
-	if checkcaller() then
+	if checkcaller() then				
 		if type(method) == "string" then
 			if method == "HttpGet" then
 				return HttpGet(self, unpack(args))
@@ -42,6 +41,7 @@ mt.__namecall = function(self, ...)
 		end
 	end
 	return namecall(self, ...)
-end)
+end
+
 print("die xd jk loaded wetard")
 error("no u")
