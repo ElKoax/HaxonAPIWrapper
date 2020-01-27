@@ -41,5 +41,5 @@ mt.__namecall = function(self, ...)
 		end
 	end
 	return namecall(self, ...)
-end
+end)
 print("Done!")
