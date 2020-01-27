@@ -31,7 +31,7 @@ end
 mt.__namecall = function(self, ...)
 	local args = { ... }
 	local method = tbl_remove(args)
-	if checkcaller() then				
+	if checkcaller() then
 		if type(method) == "string" then
 			if method == "HttpGet" then
 				return HttpGet(self, unpack(args))
@@ -42,8 +42,4 @@ mt.__namecall = function(self, ...)
 	end
 	return namecall(self, ...)
 end
-
-print("How epic! : 3")
-
-
-
+print("Done!")
