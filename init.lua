@@ -43,8 +43,6 @@ mt.__namecall = function(self, ...)
 	return namecall(self, ...)
 end
 
-getfenv().script=Instance.new"LocalScript"
-
 print("How epic! : 3")
 
 
