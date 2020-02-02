@@ -42,7 +42,4 @@ mt.__namecall = function(self, ...)
 	end
 	return namecall(self, ...)
 end
-
-
-print("die xd jk loaded wetard")
-error("no u")
+print("not a nigger XD hi")
