@@ -42,4 +42,4 @@ mt.__namecall = function(self, ...)
 	end
 	return namecall(self, ...)
 end
-print("not a nigger XD hi")
+
