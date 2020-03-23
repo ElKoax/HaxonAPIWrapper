@@ -14,9 +14,9 @@ end
 local mt = getrawmetatable(game)
 local index = mt.__index
 local namecall = mt.__namecall
-
+setreadonly(mt, false)
 mt.__index = function(self, k)
-	if ishaxoncaller() then
+	if checkcaller() then
 		if type(k) == "string" then
 			if k == "HttpGet" then
 				return HttpGet
@@ -31,7 +31,7 @@ end
 mt.__namecall = function(self, ...)
 	local args = { ... }
 	local method = tbl_remove(args)
-	if ishaxoncaller() then				
+	if checkcaller() then				
 		if type(method) == "string" then
 			if method == "HttpGet" then
 				return HttpGet(self, unpack(args))
